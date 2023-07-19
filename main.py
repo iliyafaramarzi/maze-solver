@@ -1,5 +1,5 @@
 #------------------------------------------------------------------
-# created by iliya faramrzi (telegram:iliyawww | gmail:iliyafaramarzi1384@gmail.com | linkedin:iliyafaramrzi | github: iliyafaramarzi)
+# created by iliya faramrzi (telegram:iliyafaramarzi | gmail:iliyafaramarzi1384@gmail.com | linkedin:iliyafaramrzi | github: iliyafaramarzi)
 # some notes that help you to know code better:
 # 0 means way
 # 1 mean don't way(wall)
