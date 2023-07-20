@@ -1,5 +1,5 @@
 #------------------------------------------------------------------
-# created by iliya faramrzi (telegram:iliyafaramarzi | gmail:iliyafaramarzi1384@gmail.com | linkedin:iliyafaramrzi | github: iliyafaramarzi)
+# created by iliya faramrzi (telegram:iliyawww | gmail:iliyafaramarzi1384@gmail.com | linkedin:iliyafaramrzi | github: iliyafaramarzi)
 # some notes that help you to know code better:
 # 0 means way
 # 1 mean don't way(wall)
@@ -7,6 +7,10 @@
 # 3 finish point
 # '_' means this way is checked befor
 #------------------------------------------------------------------
+import  numpy as np
+from PIL import Image
+
+
 
 # print list 10 * 10
 def printli(li):
@@ -206,5 +210,29 @@ li = reset_all(li, LI)
 
 for i in path:
     li[i] = '*'
+
+
+b = []
+for i in li:
+    if i == 1:
+        b.append(tuple((255,255,255)))
+    elif i == 0:
+        b.append(tuple((0,0,0)))
+    elif i == 3:
+        b.append(tuple((249,0,25)))
+    elif i == 2:
+        b.append(tuple((252,243,32)))
+    elif i == '*':
+        b.append(tuple((213,237,237)))
+
+finall = []
+counter = 0
+for j in range(1, 11):
+    counter += 1
+    finall.insert(j-1, b[(j-1) * 10: j * 10])
+
+x = np.asarray(finall, dtype=np.uint8)
+image = Image.fromarray(x)
+image.show()
 
 printli(li)
