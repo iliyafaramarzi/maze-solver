@@ -211,7 +211,7 @@ li = reset_all(li, LI)
 for i in path:
     li[i] = '*'
 
-# Change the values to the RGB colors
+
 b = []
 for i in li:
     if i == 1:
@@ -225,7 +225,6 @@ for i in li:
     elif i == '*':
         b.append(tuple((213,237,237)))
 
-# change the 'b' list to the something that can be Visualize with pillow 
 finall = []
 counter = 0
 for j in range(1, 11):
@@ -233,7 +232,8 @@ for j in range(1, 11):
     finall.insert(j-1, b[(j-1) * 10: j * 10])
 
 x = np.asarray(finall, dtype=np.uint8)
-image = Image.fromarray(x) #Change list to the image
-image.show() #Show Image 
+image = Image.fromarray(x)
+image = image.resize((500,500))
+image.show()
 
 printli(li)
