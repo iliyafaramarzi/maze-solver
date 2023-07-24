@@ -211,7 +211,7 @@ li = reset_all(li, LI)
 for i in path:
     li[i] = '*'
 
-
+# Change numbers to RGB color
 b = []
 for i in li:
     if i == 1:
@@ -227,13 +227,16 @@ for i in li:
 
 finall = []
 counter = 0
+# Change list t osomething that pillow can show image
 for j in range(1, 11):
     counter += 1
     finall.insert(j-1, b[(j-1) * 10: j * 10])
 
+#Generate and show image 
 x = np.asarray(finall, dtype=np.uint8)
 image = Image.fromarray(x)
 image = image.resize((500,500))
 image.show()
 
+# Print Solved maze (* is the way)
 printli(li)
